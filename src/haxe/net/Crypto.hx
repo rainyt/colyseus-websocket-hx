@@ -26,7 +26,7 @@ class Crypto {
                 var rng = new cs.system.security.cryptography.RNGCryptoServiceProvider();
                 rng.GetBytes(out.getData());
                 return out;
-            #elseif windows
+            #elseif (windows || hl)
                 /* var input = sys.io.File.read("\\Device\\KsecDD"); */
                 return haxe.io.Bytes.ofString(getRandomString(16));
             #elseif sys
