@@ -2,6 +2,14 @@ package haxe.net;
 
 import haxe.io.Bytes;
 
+#if python
+@:pythonImport("os")
+extern class RandomOs
+{
+	static public function urandom(count:Int):Array<Int>;
+}
+#end
+
 class Crypto {
     static public function getSecureRandomBytes(length:Int):Bytes {
         var reason = '';
