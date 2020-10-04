@@ -1,6 +1,4 @@
-# @colyseus/haxe-ws
-
-This project has been forked from [soywiz/haxe-ws](https://github.com/soywiz/haxe-ws).
+# colyseus-websocket ([haxe-ws](soywiz/haxe-ws) fork)
 
 This fork aims to have:
 
