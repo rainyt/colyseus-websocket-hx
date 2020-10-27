@@ -1,5 +1,9 @@
 name: Build, Release & Publish
-on: push
+
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   build:
@@ -34,7 +38,9 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         tag_name: ${{ steps.check.outputs.version }}
+        # tag_name: ${{ github.ref }}
         release_name: ${{ steps.check.outputs.version }}
+        # release_name: ${{ github.ref }}
         draft: false
         prerelease: false
 

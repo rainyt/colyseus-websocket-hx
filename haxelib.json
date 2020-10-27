@@ -1,9 +1,9 @@
 {
   "name" : "colyseus-websocket",
-  "description" : "WebSockets everywhere! Including javascript, flash and sys targets.",
+  "description" : "WebSocket client aimed for all platforms",
   "version" : "1.0.9",
   "releasenote": "View repository/changelog for details.",
-  "url" : "https://github.com/colyseus/haxe-ws",
+  "url" : "https://github.com/colyseus/colyseus-websocket-hx",
   "classPath" : "src",
   "license" : "Public",
   "tags" : ["websockets","ws","wss","js","cpp","swf","neko","php","python","java","c#","ssl","openssl"],
