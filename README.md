@@ -1,4 +1,4 @@
-# colyseus-websocket ([haxe-ws](soywiz/haxe-ws) fork)
+# colyseus-websocket ([haxe-ws](https://github.com/soywiz/haxe-ws) fork)
 
 This fork aims to have:
 
