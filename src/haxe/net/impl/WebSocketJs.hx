@@ -8,16 +8,23 @@ import js.lib.ArrayBuffer;
 import js.html.ArrayBuffer;
 #end
 
+#if nodejs
+@:jsRequire('websocket', 'w3cwebsocket')
+extern class W3CWebSocket extends js.html.WebSocket {}
+#else
+import js.html.WebSocket as W3CWebSocket;
+#end
+
 class WebSocketJs extends WebSocket {
-	private var impl:js.html.WebSocket;
+	private var impl:W3CWebSocket;
 
 	public function new(url:String, protocols:Array<String> = null) {
 		super();
 
 		if (protocols != null) {
-			impl = new js.html.WebSocket(url, protocols);
+			impl = new W3CWebSocket(url, protocols);
 		} else {
-			impl = new js.html.WebSocket(url);
+			impl = new W3CWebSocket(url);
 		}
 		impl.onopen = function(e:js.html.Event) {
 			this.onopen();
