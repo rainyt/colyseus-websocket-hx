@@ -9,6 +9,8 @@ import js.html.ArrayBuffer;
 #end
 
 #if nodejs
+// Please note that you need to have `websocket` module installed along with your nodejs app:
+// https://github.com/theturtle32/WebSocket-Node
 @:jsRequire('websocket', 'w3cwebsocket')
 extern class W3CWebSocket extends js.html.WebSocket {}
 #else
