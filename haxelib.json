@@ -9,6 +9,5 @@
   "tags" : ["websockets","ws","wss","js","cpp","swf","neko","php","python","java","c#","ssl","openssl"],
   "contributors": ["endel","soywiz"],
   "github-contributors": ["endel","soywiz","romamik","psmtec-dklein","RealyUniqueName","mepsoid"],
-  "dependencies": {
-  }
+  "dependencies": {}
 }
