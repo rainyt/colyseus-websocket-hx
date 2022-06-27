@@ -32,7 +32,7 @@ class WebSocketJs extends WebSocket {
 			this.onopen();
 		};
 		impl.onclose = function(e:js.html.Event) {
-			this.onclose();
+			this.onclose(e);
 		};
 		impl.onerror = function(e:js.html.Event) {
 			this.onerror('error');
