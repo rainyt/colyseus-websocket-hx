@@ -11,6 +11,11 @@ This fork aims to have:
 haxelib install colyseus-websocket
 ```
 
+## Changelog
+
+- 02.05.2023: Fixed `net/impl/SocketSys.hx:104: characters 55-71 : Warning : Std.is is deprecated. Use Std.isOfType instead`
+- 27.06.2022: Expose onclose event as `?Dynamic` ([d65834a](https://github.com/colyseus/colyseus-websocket-hx/commit/d65834ae4656003be64273ba0ebe12c41d38e1fa))
+
 ## License
 
 MIT
