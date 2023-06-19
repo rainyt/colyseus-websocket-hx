@@ -21,7 +21,11 @@ class SocketSys extends Socket2 {
         var impl:Dynamic = null;
         if (secure) {
             #if (haxe_ver >= "3.3")
-                this.impl = new sys.ssl.Socket();
+				#if python
+                    this.impl = new python.net.SslSocket();
+				#else
+					this.impl = new sys.ssl.Socket();
+				#end
             #else
                 throw 'Not supporting secure sockets';
             #end
