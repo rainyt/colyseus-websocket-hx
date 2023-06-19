@@ -438,7 +438,7 @@ enum State {
     Closed;
 }
 
-@:enum abstract WebSocketCloseCode(Int) {
+enum abstract WebSocketCloseCode(Int) {
     var Normal = 1000;
     var Shutdown = 1001;
     var ProtocolError = 1002;
@@ -454,7 +454,7 @@ enum State {
     var TLSError = 1015;
 }
 
-@:enum abstract Opcode(Int) {
+enum abstract Opcode(Int) {
     var Continuation = 0x00;
     var Text = 0x01;
     var Binary = 0x02;
