@@ -62,6 +62,7 @@ class WebSocketGeneric extends WebSocket {
         socket.onerror = function() {
             _debug('ioerror: ');
             this.onerror('error');
+            setClosed();
         };
         socket.ondata = function(data:Bytes) {
             socketData.writeBytes(data);

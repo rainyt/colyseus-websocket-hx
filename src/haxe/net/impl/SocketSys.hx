@@ -81,6 +81,7 @@ class SocketSys extends Socket2 {
             if (debug) trace('socket.onerror!');
             sendError = false;
             onerror();
+            return;
         }
 
 		var needClose = false;
