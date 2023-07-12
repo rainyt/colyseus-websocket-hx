@@ -71,6 +71,10 @@ class SocketSys extends Socket2 {
     }
 
     override public function process() {
+
+        if(isClosed)
+            return;
+
         if (sendConnect) {
             if (debug) trace('socket.onconnect!');
             sendConnect = false;
