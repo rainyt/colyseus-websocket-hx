@@ -139,6 +139,10 @@ class SocketSys extends Socket2 {
 
     override public function send(data:Bytes) {
         //trace('sending:$data');
+        if(isClosed){
+            trace("无效的send，因为socket已经关闭");
+            return;
+        }
         var output:haxe.io.Output = this.impl.output;
         output.write(data);
         output.flush();
